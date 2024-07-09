@@ -13,13 +13,13 @@ const boundaries = new Array()
 
 const wall = new Boundary()
 wall.start.set(20, 200)
-wall.end.set(220, 200)
+wall.end.set(220, 0)
 wall.dir = Utils().sub(wall.start, wall.end).getUnit()
 boundaries.push(wall)
 wall.draw()
 
 const ball = new Ball()
-ball.position.set(20, 20)
+ball.position.set(50, 20)
 ball.draw(boundaries)
 
 const animate = () => {

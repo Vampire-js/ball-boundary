@@ -30,7 +30,17 @@ export function Utils () {
        function dist(v1 , v2){
         return Math.sqrt(((v1.x-v2.x)^2) +((v1.y-v2.y)^2) )
        }
+
+       function distPointToLine (point , m , k) {
+        //y = mx + k => y-mx-k = 0 ;
+        let denom = Math.sqrt(m*m + 1)
+        let num = Math.abs(point.y - m*point.x - k)
+
+        return num/denom
+       }
     return {
-       sub:sub
+       sub:sub,
+       dist:dist,
+       distPointToLine:distPointToLine
     }
 }

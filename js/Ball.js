@@ -41,13 +41,16 @@ export class Ball {
       if (this.position.x <= wall.end.x && this.position.x >= wall.start.x) {
         if (Utils().distPointToLine(this.position, m, k) <= this.rad) {
           let velDir = Utils().sub(this.position, normalUnit).getUnit()
-
+          console.log(this.velocity)
           if(m < 0){
           this.velocity.x = velDir.x * this.bounceSpeed
           this.velocity.y = velDir.y * this.bounceSpeed
           }else{
             this.velocity.x = -velDir.x * this.bounceSpeed
             this.velocity.y = velDir.y * this.bounceSpeed
+          }
+          if(m == 0){
+            
           }
 
           console.log(m)

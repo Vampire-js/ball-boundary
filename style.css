@@ -3,3 +3,21 @@
   margin: 0;
   overflow: hidden;
 }
+.title{
+  color: white;
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight:lighter;
+
+  left: 50%;
+  top: 20%;
+  transform: translate(-50% , -50%);
+}
+
+.cursor{
+  width: 40px;
+  fill: white;
+  transform: rotateZ(-135deg) translate(30px , 0px);
+  cursor:none;
+}

@@ -6,7 +6,8 @@ export class Ball {
   constructor() {
 
     this.speed = 1
-    this.bounceSpeed = 3
+    this.bounceSpeed = 7
+    this.color = "white"
     this.rad = 20
     this.position = new Vector2d(0, 0)
     this.velocity = new Vector2d(0, 0)
@@ -15,7 +16,7 @@ export class Ball {
   draw(boundaries) {
     c.beginPath();
     c.arc(this.position.x, this.position.y, this.rad, 0, 2 * Math.PI, false);
-    c.fillStyle = 'white';
+    c.fillStyle = this.color;
     c.fill();
     c.lineWidth = 2;
     c.strokeStyle = 'black';
